@@ -63,5 +63,9 @@ DataBinding
 
 ~~~
 
+빌드가 안될 시
 
-- Run & Debug시에 빌드가 안되면 File -> Settings에서 Instant Run을 비활성화  
+1. File  -> Invalidate Caches / Restart
+2. Build -> Clean Project
+3. Build -> Rebuild Project
+4. Run & Debug시에 빌드가 안되면 File -> Settings에서 Instant Run을 비활성화

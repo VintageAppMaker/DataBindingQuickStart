@@ -28,6 +28,12 @@ class MainActivity : AppCompatActivity() {
         // 1. View Model을 이용한 LiveData처리
         val viewModelTest =  ViewModelProviders.of(this).get(MainViewModel::class.java)
         viewModelTest.sMessage.observe(this, Observer<String> {
+
+            // 바인딩된 bindData에 값을 넣었을 때...
+            var b = binder.bindData
+            binder.bindData = b?.apply {showMessage = it }
+
+
             Toast.makeText(applicationContext, it, Toast.LENGTH_LONG).show()
         })
 
@@ -48,10 +54,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                // 바인딩된 bindData에 값을 넣었을 때...
-                var b = binder.bindData
-                binder.bindData = b?.apply {showMessage = s.toString() }
-
                 // viewModelTest의 sMessage의 값을 넣었을 때,
                 // .value에 유의
                 viewModelTest.sMessage.value = s.toString()
