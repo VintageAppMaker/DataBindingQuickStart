@@ -7,7 +7,7 @@ DataBinding
 
 - XML에서는 layout으로 시작하고 그 안에 data와 view를 분리한다. 
 
-~~~
+~~~xml
 
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
