@@ -15,6 +15,10 @@ dependencies에서 다음추가
 
 kapt "com.android.databinding:compiler:3.0.1"
 
+dataBinding {
+    enabled = true
+}
+
 ~~~
 
 DataBinding
