@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
 
         // 1. View Model을 이용한 LiveData처리
         val viewModelTest =  ViewModelProviders.of(this).get(MainViewModel::class.java)
