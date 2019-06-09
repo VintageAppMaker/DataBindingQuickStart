@@ -3,6 +3,20 @@ UltraQuick DataBinding &amp; ViewModel경험하기
 
 > MVVM의 기본이 되는 LiveData, ViewModel, DataBinding을 직관적으로 이해하기 위한 소스 
 
+~~~
+app의 build.gradle에서 
+
+plugin에서 다음추가 
+apply plugin: 'kotlin-kapt'
+
+...
+
+dependencies에서 다음추가  
+
+kapt "com.android.databinding:compiler:3.0.1"
+
+~~~
+
 DataBinding
 
 - XML에서는 layout으로 시작하고 그 안에 data와 view를 분리한다. 
